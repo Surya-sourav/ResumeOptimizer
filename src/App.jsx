@@ -15,21 +15,24 @@ function App() {
     try {
       setIsLoading(true);
       setError(null);
-      
-      const response = await fetch('http://localhost:5000/api/resume/rewrite', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ bulletPoint, tone }),
-      });
+
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/api/resume/rewrite`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ bulletPoint, tone })
+        }
+      );
 
       const data = await response.json();
-      
+
       if (!response.ok) {
         throw new Error(data.message || 'Failed to rewrite bullet point');
       }
-      
+
       setRewrittenBullet(data.data.rewrittenBullet);
     } catch (error) {
       console.error('Error:', error);
