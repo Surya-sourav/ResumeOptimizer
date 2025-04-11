@@ -1,0 +1,151 @@
+/* src/components/ResumeForm.css */
+.resume-form-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .form-header {
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+  
+  .form-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .form-header p {
+    color: #6c757d;
+    font-size: 0.95rem;
+  }
+  
+  .resume-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .form-group textarea, 
+  .form-group select {
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    width: 100%;
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .form-group textarea:focus, 
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+  }
+  
+  .select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8rem;
+    color: #e0e0e0;
+  }
+  
+  .form-group select {
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  .tone-description {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-left: 3px solid var(--primary-color);
+  }
+  
+  .submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    width: 100%;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .resume-form-container {
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-header h2 {
+      font-size: 1.4rem;
+    }
+    
+    .form-group textarea {
+      min-height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .resume-form-container {
+      padding: 1rem;
+    }
+    
+    .form-header h2 {
+      font-size: 1.3rem;
+    }
+    
+    .form-group textarea, 
+    .form-group select {
+      padding: 10px;
+    }
+  }
