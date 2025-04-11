@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: [
-    'https://resume-optimizer-one.vercel.app/'
+    'https://resume-optimizer-one.vercel.app/',
+    'https://resume-optimizer-git-frontend-surya-souravs-projects.vercel.app/',
+    'https://resume-optimizer-jwilbqf8m-surya-souravs-projects.vercel.app/'
   ]
 }));
 app.use(express.json());
