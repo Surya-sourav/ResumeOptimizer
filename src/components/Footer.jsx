@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>© {new Date().getFullYear()} Smart Resume Rewriter</p>
+        <p>© Made With ❤️ for Vettel-Tech </p>
       </div>
     </footer>
   );
