@@ -17,7 +17,7 @@ function App() {
       setError(null);
 
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/resume/rewrite`,
+        'https://resumeoptimizer.onrender.com/api/resume/rewrite',
         {
           method: 'POST',
           headers: {
